@@ -1,13 +1,21 @@
-
 import Image from "next/image";
-import Footer from "./components/Footer/Footer.jsx"
-import Navbar from "../app/components/Navbar/Navbar.jsx"
+import styles from "./homepage.module.css";
+import Featured from "./components/featured/Featured.jsx";
+import CategoryList from "./components/categoryList/CategoryList.jsx";
+import CardList from "./components/cardList/CardList.jsx";
+import Menu from "./components/menu/Menu.jsx";
+
 
 
 export default function Home() {
   return (
-    <div>
-      main content
+    <div className={styles.container}>
+      <Featured />
+      <CategoryList />
+      <div className={styles.content}>
+        <CardList />
+        <Menu />
+      </div>
     </div>
 
   );
